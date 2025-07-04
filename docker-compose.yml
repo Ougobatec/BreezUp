@@ -1,0 +1,49 @@
+services:
+  backend:
+    build:
+      context: ./breezup-backend
+      dockerfile: Dockerfile
+    container_name: breezup-backend
+    env_file:
+      - ./breezup-backend/.env.production
+    depends_on:
+      - mongo
+    networks:
+      - breezup-net
+
+  frontend:
+    build:
+      context: ./breezup-frontend
+      dockerfile: Dockerfile
+    container_name: breezup-frontend
+    depends_on:
+      - backend
+    networks:
+      - breezup-net
+
+  nginx:
+    image: nginx:latest
+    container_name: balancer
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: always
+    networks:
+      - breezup-net
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - breezup-net
+
+volumes:
+  mongo-data:
+
+networks:
+  breezup-net:
