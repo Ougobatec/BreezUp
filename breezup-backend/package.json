@@ -1,0 +1,31 @@
+{
+  "name": "breezup-backend",
+  "version": "1.0.0",
+  "description": "A lightweight and responsive social network, inspired by Twitter/X",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ougobatec/BreezUp.git"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "docker",
+    "app",
+    "express",
+    "social-media",
+    "mongodb",
+    "social-network",
+    "mongoose",
+    "nextjs"
+  ],
+  "author": "Hugo Battaglia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ougobatec/BreezUp/issues"
+  },
+  "homepage": "https://github.com/Ougobatec/BreezUp#readme"
+}
