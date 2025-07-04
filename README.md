@@ -72,18 +72,6 @@
 * Thèmes personnalisés
 
 
-## 📐 Architecture (microservices)
-
-* **Frontend Service** : Interface utilisateur (Next.js)
-* **Auth Service** : Authentification, gestion JWT
-* **User Service** : Gestion des utilisateurs, profils, thèmes
-* **Post Service** : Posts, commentaires, likes
-* **Subscription Service** : Abonnés, abonnements
-* **Message Service** : Messages
-* **Notification Service** *(optionnel)* : Gestion des alertes en temps réel
-* **Report Service** *(optionnel)* : Signalements, bannissements
-* **Gateway/API** : Point d’entrée de l’application
-
 ## 📐 Architecture
 
 BreezUp est basé sur une **architecture monolithique modulaire**, avec un **unique backend Express** regroupant tous les modèles et fonctionnalités de l'application.
